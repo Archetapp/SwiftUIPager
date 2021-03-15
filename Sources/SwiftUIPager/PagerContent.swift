@@ -221,7 +221,7 @@ extension Pager.PagerContent {
     }
 
     func onDragChanged(with value: DragGesture.Value) {
-        withAnimation(.linear(duration: 0.4)) {
+        withAnimation(.linear(duration: 0.3)) {
             if self.lastDraggingValue == nil {
                 onDraggingBegan?()
             }
@@ -269,7 +269,7 @@ extension Pager.PagerContent {
         self.onDraggingEnded?()
 
         var defaultPagingAnimation: PagingAnimation = .standard
-        var speed: Double = 1
+        var speed: Double = 0.6
         if allowsMultiplePagination && pageIncrement > 1 {
             defaultPagingAnimation = .steep
             speed = 1 / min(4, Double(pageIncrement))
