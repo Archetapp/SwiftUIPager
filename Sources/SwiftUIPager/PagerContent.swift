@@ -281,7 +281,7 @@ extension Pager.PagerContent {
         if page != newPage {
             onPageWillChange?(newPage)
         }
-        withAnimation(.interpolatingSpring(stiffness: 0.3, damping: 0.6)) {
+        withAnimation(.easeOut(duration: 2)) {
             self.pagerModel.draggingOffset = 0
             self.pagerModel.pageIncrement = pageIncrement
             self.pagerModel.draggingVelocity = 0
