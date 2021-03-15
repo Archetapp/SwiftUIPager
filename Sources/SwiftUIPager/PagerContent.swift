@@ -221,7 +221,7 @@ extension Pager.PagerContent {
     }
 
     func onDragChanged(with value: DragGesture.Value) {
-        withAnimation(.interactiveSpring(response: 0, dampingFraction: 0.8, blendDuration: 0.5)) {
+        withAnimation(.interactiveSpring(response: 0.2, dampingFraction: 0.8, blendDuration: 0.5)) {
             if self.lastDraggingValue == nil {
                 onDraggingBegan?()
             }
